@@ -1,0 +1,42 @@
+const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+
+module.exports = {
+    mode: "production",
+    entry: "./src/index.ts",
+    output: {
+        path: path.join(__dirname, "dist/"),
+        filename: "js/colibo-demo-widget.element.js"
+    },
+    resolve: {
+        extensions: [".ts", ".js"]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "demo/index.html",
+        }),
+        new CopyWebpackPlugin([
+            "widget.json"
+        ])
+    ],
+    module: {
+        rules: [{
+            test: /\.ts$/,
+            loader: [
+                { loader: "template-string-optimize-loader" },
+                { loader: "awesome-typescript-loader" }
+            ]
+        }
+        ]
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: "all"
+            }),
+        ],
+    },
+};

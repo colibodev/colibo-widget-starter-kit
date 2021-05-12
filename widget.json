@@ -1,0 +1,22 @@
+{
+    "name": "Image",
+    "allowedLocationTypes": [
+        "Home",
+        "UserProfile"
+    ],
+    "description": null,
+    "bundleUrl": "https://coliboassets.blob.core.windows.net/assets/widgets/colibo-demo-widget/__Build.BuildNumber__/colibo-demo-widget.element.js",
+    "legacyBundleUrl": "https://coliboassets.blob.core.windows.net/assets/widgets/colibo-demo-widget/__Build.BuildNumber__/colibo-demo-widget.element.es5.js",
+    "htmlElementName": "colibo-demo-widget",
+    "initialDisplayHeight": 0,
+    "configurationDefinition": [
+        {
+            "defaultValue": true,
+            "description": "This is just for demo purposes",
+            "key": "forDemo",
+            "label": "For demo",
+            "type": "boolean",
+            "required": false
+        }
+    ]
+}
