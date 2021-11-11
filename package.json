@@ -1,6 +1,6 @@
 {
     "name": "colibo-widget-starter-kit",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "ISC",
     "scripts": {
         "start": "webpack-dev-server --config webpack.dev.config.js",
@@ -10,14 +10,14 @@
         "clean": "rimraf build dist"
     },
     "devDependencies": {
-        "@babel/core": "^7.14.0",
-        "@babel/plugin-transform-runtime": "^7.13.15",
+        "@babel/core": "^7.16.0",
+        "@babel/plugin-transform-runtime": "^7.16.0",
         "@babel/polyfill": "^7.12.1",
-        "@babel/preset-env": "^7.14.1",
-        "@babel/runtime": "^7.14.0",
-        "autoprefixer": "^9.8.6",
+        "@babel/preset-env": "^7.16.0",
+        "@babel/runtime": "^7.16.3",
+        "autoprefixer": "^9.8.8",
         "awesome-typescript-loader": "^5.2.1",
-        "babel-loader": "^8.0.2",
+        "babel-loader": "^8.2.3",
         "copy-webpack-plugin": "^4.6.0",
         "css-loader": "^1.0.0",
         "html-webpack-include-assets-plugin": "^1.0.5",
@@ -30,13 +30,13 @@
         "template-string-optimize-loader": "^3.0.0",
         "terser-webpack-plugin": "^2.1.0",
         "tslint": "^5.20.1",
-        "typescript": "^3.9.9",
+        "typescript": "^3.9.10",
         "webpack": "^4.18.0",
         "webpack-cli": "^3.1.0",
-        "webpack-dev-server": "^3.11.0"
+        "webpack-dev-server": "^3.11.3"
     },
     "dependencies": {
-        "lit": "^2.0.0-rc.2"
+        "lit": "^2.0.2"
     },
     "browserslist": [
         "last 2 version",
