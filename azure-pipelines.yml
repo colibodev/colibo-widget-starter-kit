@@ -4,5 +4,5 @@ resources:
       type: git
       name: Colibo/Colibo.CommonWidgetBuildTemplates
 
-jobs:
-- template: common.yml@templates
+extends:
+  template: common.yml@templates
