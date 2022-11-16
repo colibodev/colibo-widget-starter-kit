@@ -1,5 +1,5 @@
 {
-    "name": "Image",
+    "name": "Widget Starter Kit",
     "allowedLocationTypes": [
         "Home",
         "UserProfile"
@@ -8,7 +8,13 @@
     "bundleUrl": "https://coliboassets.blob.core.windows.net/assets/widgets/colibo-demo-widget/__Build.BuildNumber__/colibo-demo-widget.element.js",
     "legacyBundleUrl": "https://coliboassets.blob.core.windows.net/assets/widgets/colibo-demo-widget/__Build.BuildNumber__/colibo-demo-widget.element.es5.js",
     "htmlElementName": "colibo-demo-widget",
+    "categories": {
+        "Demo"
+    },
+    "exampleImages": [],
+    "posterImage": null,
     "initialDisplayHeight": 0,
+    "requiresElevation": false,
     "configurationDefinition": [
         {
             "defaultValue": true,
@@ -16,7 +22,11 @@
             "key": "forDemo",
             "label": "For demo",
             "type": "boolean",
-            "required": false
+            "required": false,
+            "tab": "Content",
+            "allowedLocations": [],
+            "requires": null,
+            "requiresValue": null
         }
     ]
 }
