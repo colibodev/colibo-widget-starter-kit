@@ -17,19 +17,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "demo/index.html",
         }),
-        new CopyWebpackPlugin([
-            "widget.json"
-        ])
+        new CopyWebpackPlugin({
+            patterns: ["widget.json"]
+        })
     ],
     module: {
         rules: [{
             test: /\.ts$/,
-            loader: [
-                { loader: "template-string-optimize-loader" },
-                { loader: "awesome-typescript-loader" }
-            ]
-        }
-        ]
+            loader: "ts-loader"
+        }]
     },
     optimization: {
         minimize: true,

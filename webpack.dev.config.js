@@ -16,11 +16,14 @@ module.exports = {
         extensions: [".ts", ".js"]
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist/"),
+        watchFiles: path.join(__dirname, "dist/"),
         historyApiFallback: true,
-        https: {
-            key: fs.readFileSync("ssl/server.key"),
-            cert: fs.readFileSync("ssl/server.crt")
+        server: {
+            type: "https",
+            options: {
+                key: fs.readFileSync("ssl/server.key"),
+                cert: fs.readFileSync("ssl/server.crt")
+            }
         }
     },
     plugins: [
@@ -34,7 +37,7 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.ts$/,
-                loader: "awesome-typescript-loader"
+                loader: "ts-loader"
             },
             {
                 test: /\.scss$/,
